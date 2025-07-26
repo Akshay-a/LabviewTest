@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<VI LVVersion="2100">
+    <FrontPanel>
+        <Control Name="A" Type="Double" Position="10,10"/>
+        <Control Name="B" Type="Double" Position="10,50"/>
+        <Control Name="C" Type="Double" Position="10,90"/>
+        <Indicator Name="Result" Type="Double" Position="10,130"/>
+        <Control Name="Calculate" Type="Button" Position="10,170"/>
+        <Control Name="Stop" Type="Button" Position="100,170"/>
+    </FrontPanel>
+    <BlockDiagram>
+        <Node Name="CalculationObject" Type="Object" Class="Calculation.lvclass"/>
+        <EventStructure>
+            <Event Case="Calculate:Value Change">
+                <Wire Source="A" Sink="CalculationObject.Input A"/>
+                <Wire Source="B" Sink="CalculationObject.Input B"/>
+                <Wire Source="C" Sink="CalculationObject.Input C"/>
+                <Node Name="CalculateMethod" Method="Calculation.lvclass:Calculate.vi"/>
+                <Wire Source="CalculateMethod.Result" Sink="Result"/>
+            </Event>
+            <Event Case="Stop:Value Change">
+                <Node Name="Stop" Type="Stop"/>
+            </Event>
+        </EventStructure>
+    </BlockDiagram>
+</VI>
