@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Project Type="Project" LVVersion="2100">
+    <Item Name="My Computer" Type="My Computer">
+        <Item Name="Calculation.lvclass" Type="LVClass">
+            <Property Name="NI.LVClass.Path" Type="Path">Calculation.lvclass</Property>
+        </Item>
+        <Item Name="Main.vi" Type="VI">
+            <Property Name="NI.VI.Path" Type="Path">Main.vi</Property>
+        </Item>
+    </Item>
+</Project>
