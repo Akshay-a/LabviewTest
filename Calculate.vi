@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<VI LVVersion="2100">
+    <BlockDiagram>
+        <!-- Implements a simple scientific calculation (e.g., quadratic formula) -->
+        <Terminal Name="Input A" Type="Double" Direction="Input"/>
+        <Terminal Name="Input B" Type="Double" Direction="Input"/>
+        <Terminal Name="Input C" Type="Double" Direction="Input"/>
+        <Terminal Name="Result" Type="Double" Direction="Output"/>
+        <Node Name="QuadraticFormula">
+            <!-- Calculates x = (-b ± √(b²-4ac))/(2a) -->
+            <Wire Source="Input B" Sink="b"/>
+            <Wire Source="Input A" Sink="a"/>
+            <Wire Source="Input C" Sink="c"/>
+            <MathOperation Name="Discriminant" Formula="b^2 - 4*a*c"/>
+            <MathOperation Name="SqrtDiscriminant" Formula="sqrt(Discriminant)"/>
+            <MathOperation Name="Result" Formula="(-b + SqrtDiscriminant)/(2*a)"/>
+            <Wire Source="Result" Sink="Output"/>
+        </Node>
+    </BlockDiagram>
+</VI>
