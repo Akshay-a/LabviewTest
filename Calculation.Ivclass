@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Library LVVersion="2100" Type="LVClass">
+    <Item Name="Calculate.vi" Type="VI">
+        <Property Name="NI.VI.Path" Type="Path">Calculate.vi</Property>
+    </Item>
+</Library>
